@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="FarhatLab — компьютерная техника, комплектующие и периферия для работы, игр и создания. Видеокарты, процессоры, мониторы, периферия и многое другое."
+    />
+    <meta name="theme-color" content="#0b0d12" />
+    <title>FarhatLab — Компьютерная техника и периферия</title>
+    <script>
+      // Тема применяется до первого рендера, чтобы не было мигания
+      (function () {
+        try {
+          var t = JSON.parse(localStorage.getItem('farhatlab:theme'));
+          if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
