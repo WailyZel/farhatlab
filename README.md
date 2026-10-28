@@ -48,6 +48,8 @@ src/
 npm install
 npm run dev       # разработка: http://localhost:5173
 npm run build     # production-сборка в dist/
+
+
 npm run preview   # предпросмотр сборки: http://localhost:4173
 ```
 
@@ -56,7 +58,6 @@ npm run preview   # предпросмотр сборки: http://localhost:4173
 1. Создайте репозиторий на GitHub и отправьте код в ветку `main`:
    ```bash
    git init
-   git add .
    git commit -m "FarhatLab"
    git branch -M main
    git remote add origin https://github.com/<user>/<repo>.git
